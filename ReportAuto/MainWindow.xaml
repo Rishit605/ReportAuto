@@ -1,0 +1,75 @@
+﻿<Window x:Class="ReportAuto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReportAuto"
+        mc:Ignorable="d"
+        Title="Report Automation" 
+        Height="720" Width="1280" 
+        WindowStyle="None" 
+        ResizeMode="CanResize" 
+        Background="Cornsilk" 
+        AllowsTransparency="True">
+
+    <Border Background="#496989" CornerRadius="15">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Retro" 
+                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Foreground="#A8CD9F" FontSize="50" FontFamily="Cordia New"/>
+
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Home"
+                             Height="50"
+                             Foreground="#A8CD9F"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+                <RadioButton Content="New"
+                             Height="50"
+                             Foreground="#A8CD9F"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+                <RadioButton Content="Insert"
+                             Height="50"
+                             Foreground="#A8CD9F"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"/>
+            </StackPanel>
+
+            <TextBox Width="250" Height="40"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     FontFamily="Cordia New"
+                     FontSize="15"
+                     Margin="50, 0, 0, 0"
+                     Grid.Column="1"
+                     Style="{StaticResource ReportBox}"/>
+
+            <StackPanel Grid.Row="1" Grid.Column="1"
+                        Margin="5">
+                <Border CornerRadius="10"/>
+                
+                    <TextBox Width="500" Height="200"
+                             Margin="10, 10, 10, 250" HorizontalAlignment="Left"/>
+
+            </StackPanel>
+            
+            <ContentControl Grid.Row="1" Grid.Column="1"
+                            Margin="15"/>
+
+        </Grid>
+        
+    </Border>
+</Window>
