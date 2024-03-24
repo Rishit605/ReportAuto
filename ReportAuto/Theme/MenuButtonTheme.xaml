@@ -18,11 +18,11 @@
                          </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="TextContent" Property="Foreground" Value="#E2F4C5" />
+                                <Setter TargetName="TextContent" Property="Foreground" Value="#F2D8D8" />
                             </Trigger>
                             
                             <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="TextContent" Property="Foreground" Value="#A8CD9F" />
+                                <Setter TargetName="TextContent" Property="Foreground" Value="#545B77" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -35,11 +35,11 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#E2F4C5"/>
+                <Setter Property="Background" Value="#F2D8D8"/>
             </Trigger>
 
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#58A399"/>
+                <Setter Property="Background" Value="#5C8984"/>
             </Trigger>
         </Style.Triggers>
     </Style>
