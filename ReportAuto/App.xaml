@@ -7,7 +7,11 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/EmailTextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DateTextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/WDInputTextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/AchieveInputTextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/EmailSubjectTextBoxTheme.xaml"/>
                 <ResourceDictionary Source="Theme/Brushes.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

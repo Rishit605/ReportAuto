@@ -14,15 +14,15 @@
 
                                <TextBlock x:Name="TextContent" Text="{TemplateBinding Property=Content}" 
                                           VerticalAlignment="Center"
-                                          Margin="100, 0, 0, 0"/>
+                                          Margin="75, 0, 0, 0"/>
                          </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="TextContent" Property="Foreground" Value="#58A399" />
+                                <Setter TargetName="TextContent" Property="Foreground" Value="#E2F4C5" />
                             </Trigger>
                             
                             <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="TextContent" Property="Foreground" Value="#58A399" />
+                                <Setter TargetName="TextContent" Property="Foreground" Value="#A8CD9F" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -33,10 +33,14 @@
             <Setter Property="BorderThickness" Value="0"/>
         </Style.Setters>
 
-         <Style.Triggers>
+        <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
                 <Setter Property="Background" Value="#E2F4C5"/>
             </Trigger>
-         </Style.Triggers>
+
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#58A399"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

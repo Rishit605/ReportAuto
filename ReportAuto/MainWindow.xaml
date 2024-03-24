@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="Report Automation" 
         Height="720" Width="1280" 
-        WindowStyle="None" 
+        WindowStyle="ThreeDBorderWindow" 
         ResizeMode="CanResize" 
         Background="Cornsilk" 
-        AllowsTransparency="True">
+        AllowsTransparency="False">
 
-    <Border Background="#496989" CornerRadius="15">
+    <Border Background="#F2D8D8" CornerRadius="15">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
@@ -20,56 +20,133 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="101"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
             <TextBlock Text="Retro" 
                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                       Foreground="#A8CD9F" FontSize="50" FontFamily="Cordia New"/>
+                       Foreground="#545B77" FontSize="50" FontFamily="Cordia New"/>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Margin="2">
+                <Border CornerRadius="10" BorderThickness="1" BorderBrush="#5C8984"/>
+
                 <RadioButton Content="Home"
                              Height="50"
-                             Foreground="#A8CD9F"
+                             Foreground="#374259"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"/>
 
                 <RadioButton Content="New"
                              Height="50"
-                             Foreground="#A8CD9F"
+                             Foreground="#374259"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"/>
 
                 <RadioButton Content="Insert"
                              Height="50"
-                             Foreground="#A8CD9F"
+                             Foreground="#374259"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
 
-            <TextBox Width="250" Height="40"
+            <!--<TextBox Width="250" Height="40"
                      VerticalAlignment="Center"
                      HorizontalAlignment="Left"
                      FontFamily="Cordia New"
                      FontSize="15"
                      Margin="50, 0, 0, 0"
                      Grid.Column="1"
-                     Style="{StaticResource ReportBox}"/>
+                     Style="{StaticResource ReportBox}"/>-->
 
-            <StackPanel Grid.Row="1" Grid.Column="1"
-                        Margin="5">
-                <Border CornerRadius="10"/>
-                
-                    <TextBox Width="500" Height="200"
-                             Margin="10, 10, 10, 250" HorizontalAlignment="Left"/>
+            <StackPanel Grid.Column="1">
+                <RadioButton Content="Input" Margin="100, 50, 300, 0"
+                             Height="50"
+                             VerticalAlignment="Bottom"
+                             Foreground="#545B77"
+                             FontFamily="Cordia New"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}" Width="200"/>
+
+                <RadioButton Content="Preview" Margin="200, -200, 0, 0"
+                             Height="50"
+                             VerticalAlignment="Bottom"
+                             Foreground="#545B77"
+                             FontFamily="Cordia New"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}" Width="200"/>
 
             </StackPanel>
-            
+
+            <StackPanel Grid.Row="1" Grid.Column="1"
+                        Margin="2">
+
+                <Border CornerRadius="10" BorderThickness="1" BorderBrush="#5C8984"/>
+
+
+
+                <TextBlock Text="From" Margin="15, 10, 0, 5"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                           Foreground="#545B77" FontSize="18" FontFamily="Cordia New"/>
+                <TextBox Margin="10, 0, 0, 0" HorizontalAlignment="Left"
+                         VerticalAlignment="Top" FontFamily="Cordia New"
+                         Grid.Column="1"
+                         Style="{StaticResource EmailTextBoxTheme}"/>
+
+                <TextBlock Text="To" Margin="15, 10, 0, 5"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                           Foreground="#545B77" FontSize="18" FontFamily="Cordia New"/>
+                <TextBox Margin="10, 0, 0, 0" HorizontalAlignment="Left"
+                         VerticalAlignment="Top" FontFamily="Cordia New"
+                         Grid.Column="1"
+                         Style="{StaticResource EmailTextBoxTheme}"/>
+
+                <TextBlock Text="Subject" Margin="15, 10, 0, 5"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                           Foreground="#545B77" FontSize="18" FontFamily="Cordia New"/>
+                <TextBox Margin="10, 0, 0, 0" HorizontalAlignment="Left"
+                         VerticalAlignment="Top" FontFamily="Cordia New"
+                         Grid.Column="1"
+                         Style="{StaticResource EmailSubjectTextBoxTheme}"/>
+
+                <TextBlock Text="Date" Margin="15, 10, 0, 5"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                           Foreground="#545B77" FontSize="18" FontFamily="Cordia New"/>
+                <TextBox Margin="10, 0, 0, 0" HorizontalAlignment="Left"
+                         VerticalAlignment="Top" FontFamily="Cordia New"
+                         Grid.Column="1"
+                         Style="{StaticResource DateTextBoxTheme}"/>
+
+
+
+
+
+
+                <TextBlock Text="Work Done Summary" Margin="15, 40, 0, 0"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                           Foreground="#545B77" FontSize="18" FontFamily="Cordia New"/>
+                <TextBox Margin="10, 5, 40, 250" HorizontalAlignment="Left"
+                         VerticalAlignment="Top" FontFamily="Cordia New"
+                         FontSize="16"
+                         Grid.Column="1"
+                         Style="{StaticResource WDInputTextBoxTheme}"/>
+
+
+                <TextBlock Text="Achivement Summary" Margin="0, -1615, 280, 0"
+                           VerticalAlignment="Center" HorizontalAlignment="Right"
+                           Foreground="#545B77" FontSize="18" FontFamily="Cordia New"/>
+                <TextBox Margin="0, -790, 10, 0" HorizontalAlignment="Right"
+                         VerticalAlignment="Top" FontFamily="Cordia New"
+                         FontSize="16"
+                         Grid.Column="1"
+                         Style="{StaticResource AchieveInputTextBoxTheme}"/>
+
+            </StackPanel>
+
             <ContentControl Grid.Row="1" Grid.Column="1"
-                            Margin="15"/>
+                            Margin="1046,15,-1016,15"/>
 
         </Grid>
-        
+
     </Border>
 </Window>
